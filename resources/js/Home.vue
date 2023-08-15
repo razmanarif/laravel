@@ -11,26 +11,21 @@
                 <h1 class="text-xl font-bold">{{ personName }}</h1>
                 <p class="mt-2 text-xs">{{ personDescription }}</p>
                 <div class="flex space-x-4 mt-4">
-                    <!-- The code for your social icons remains unchanged -->
-                    <!-- Twitter -->
                     <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
                         <a :href="twitterURL" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-twitter" class="text-sm" />
                         </a>
                     </div>
-                    <!-- Instagram -->
                     <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
                         <a :href="instagramURL" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-instagram"  class="text-sm" />
                         </a>
                     </div>
-                    <!-- Facebook -->
                     <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
                         <a :href="facebookURL" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-facebook"  class="text-sm" />
                         </a>
                     </div>
-                    <!-- LinkedIn -->
                     <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
                         <a :href="linkedinURL" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-linkedin"  class="text-sm" />
