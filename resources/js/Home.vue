@@ -1,7 +1,19 @@
 <template>
-    <div :class="isDarkMode ? 'bg-gray-900 text-white min-h-screen flex items-center justify-center' : 'bg-cyan-400 min-h-screen flex items-center justify-center'">
+    <div
+        :class="
+            isDarkMode
+                ? 'bg-gray-900 text-white min-h-screen flex items-center justify-center'
+                : 'bg-cyan-400 min-h-screen flex items-center justify-center'
+        "
+    >
         <!-- <button @click="toggleDarkMode" class="absolute top-4 right-4 px-4 py-2 bg-green-500 rounded-full">Toggle Dark Mode</button> -->
-        <div :class="isDarkMode ? 'bg-gray-800 w-72 h-96 rounded-lg shadow-lg' : 'bg-white w-72 h-96 rounded-lg shadow-lg'">
+        <div
+            :class="
+                isDarkMode
+                    ? 'bg-gray-800 w-72 h-96 rounded-lg shadow-lg'
+                    : 'bg-white w-72 h-96 rounded-lg shadow-lg'
+            "
+        >
             <img
                 :src="photoURL"
                 alt="Profile Picture"
@@ -11,29 +23,70 @@
                 <h1 class="text-xl font-bold">{{ personName }}</h1>
                 <p class="mt-2 text-xs">{{ personDescription }}</p>
                 <div class="flex space-x-4 mt-4">
-                    <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
+                    <div
+                        :class="
+                            isDarkMode
+                                ? 'bg-gray-500 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                                : 'bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                        "
+                    >
                         <a :href="twitterURL" target="_blank">
-                            <font-awesome-icon icon="fa-brands fa-twitter" class="text-sm" />
+                            <font-awesome-icon
+                                icon="fa-brands fa-twitter"
+                                class="text-sm"
+                            />
                         </a>
                     </div>
-                    <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
+                    <div
+                        :class="
+                            isDarkMode
+                                ? 'bg-gray-500 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                                : 'bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                        "
+                    >
                         <a :href="instagramURL" target="_blank">
-                            <font-awesome-icon icon="fa-brands fa-instagram"  class="text-sm" />
+                            <font-awesome-icon
+                                icon="fa-brands fa-instagram"
+                                class="text-sm"
+                            />
                         </a>
                     </div>
-                    <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
+                    <div
+                        :class="
+                            isDarkMode
+                                ? 'bg-gray-500 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                                : 'bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                        "
+                    >
                         <a :href="facebookURL" target="_blank">
-                            <font-awesome-icon icon="fa-brands fa-facebook"  class="text-sm" />
+                            <font-awesome-icon
+                                icon="fa-brands fa-facebook"
+                                class="text-sm"
+                            />
                         </a>
                     </div>
-                    <div class="bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center">
+                    <div
+                        :class="
+                            isDarkMode
+                                ? 'bg-gray-500 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                                : 'bg-gray-200 rounded-full p-2 w-6 h-6 flex items-center justify-center'
+                        "
+                    >
                         <a :href="linkedinURL" target="_blank">
-                            <font-awesome-icon icon="fa-brands fa-linkedin"  class="text-sm" />
+                            <font-awesome-icon
+                                icon="fa-brands fa-linkedin"
+                                class="text-sm"
+                            />
                         </a>
                     </div>
                 </div>
             </div>
-            <button @click="toggleDarkMode" class="mt-4 px-4 py-2 bg-green-500 rounded-full">{{ buttonText }}</button>
+            <button
+                @click="toggleDarkMode"
+                class="mt-4 px-4 py-2 bg-green-600 rounded-full"
+            >
+                {{ buttonText }}
+            </button>
         </div>
     </div>
 </template>
@@ -56,17 +109,13 @@ export default {
     },
     computed: {
         buttonText() {
-            return this.isDarkMode ? 'Light Mode' : 'Dark Mode';
-        }
+            return this.isDarkMode ? "Light Mode" : "Dark Mode";
+        },
     },
     methods: {
         toggleDarkMode() {
             this.isDarkMode = !this.isDarkMode;
-        }
-    }
+        },
+    },
 };
 </script>
-
-<style scoped>
-/* Additional styles (if any) can be added here */
-</style>
